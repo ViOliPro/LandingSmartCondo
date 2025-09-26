@@ -234,7 +234,7 @@ button:hover {
 
 
  /*360px (smartphones), 768px (tablets) e 1366px ou 1920px (desktops),*/
- @media screen and (min-width: 768px) {
+ @media screen and (max-width: 768px) {
     .btnAccess {
     width: 20%;
     font-size: 18px;
