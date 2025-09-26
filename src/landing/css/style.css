@@ -139,7 +139,6 @@ button:hover {
 }
 
 #cards{
-  max-width: 1160px;
   display:flex;
   flex-direction: row;
   justify-content: space-between;
@@ -151,6 +150,39 @@ button:hover {
   border-radius: 8px;
   padding: 40px 0 0 15px;
   margin: 0 25px;
+  list-style-type: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  position: relative;
+  border: none;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-left: 2px solid var(--secondary-color);
+  border-right: 2px solid var(--secondary-color);
+  border-bottom: 2px solid var(--secondary-color);
+  border-top: 2px solid var(--secondary-color);
+  box-sizing: border-box;
+  transition: height 0.3s ease;
+  pointer-events: none;
+  height: 0%;
+  width: 0%;
+  border-radius: 8px;
+}
+.card:hover::before{
+  height: 100%;
+  width: 100%;
+  transition: 0.3s ease;
+
 }
 
 .card h3{
@@ -199,3 +231,37 @@ button:hover {
 .infoTextImg h3{
   max-width: 400px;
 }
+
+
+ /*360px (smartphones), 768px (tablets) e 1366px ou 1920px (desktops),*/
+ @media screen and (min-width: 768px) {
+    .btnAccess {
+    width: 20%;
+    font-size: 18px;
+  }
+  #container {
+    height: 466px;
+    background-size: contain;
+  }
+  #container button {
+    width: 20%;
+    font-size: 18px;
+  }
+  .infoContainer h1 {
+    font-size: 24px;
+    width: 537px;
+
+  }
+    .card {
+        width: 50%;
+        padding: 15px 0 0 15px;
+        height: 75%;
+        margin: 0 15px;
+    }
+    .card img {
+      height: 35px;
+    }
+.card h3 {
+  font-size: 14px;
+}
+ }
