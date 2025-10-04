@@ -1,0 +1,53 @@
+{
+  "users": [
+    { 
+      "id": 1, 
+      "name": "Marcos de Souza", 
+      "password": "hashed_password",
+      "cpf": "123.456.789-00",
+      "dateOfBirth": "1990-01-01",
+      "email": "morador@gmail.com",
+      "tel": "11999999999",
+      "unit": "Bloco A - Ap 101",
+      "dateRegistered": "2023-01-15T10:00:00Z",
+      "role": "morador/proprietário/síndico",
+      "linkedParkingSpaces": ["A1", "A2"],
+      "vehicles": [
+        { "type": "carro", "plate": "ABC-1234" },
+        { "type": "moto", "plate": "XYZ-5678" }
+      ]
+    }
+  
+  ],
+
+  "occurrences": [
+    { 
+      "id": 1, 
+      "title": "Reclamação de barulho", 
+      "authorId": 1,
+      "status": "pending",
+      "description": "O vizinho do apartamento 203 está fazendo muito barulho à noite.",
+      "date": "2024-07-10T22:00:00Z"
+    }
+  ],
+
+  "reservations": [
+    { 
+      "id": 1, 
+      "space": "Salão de festas", 
+      "userId": 1, 
+      "approvedBy": 2,
+      "status": "approved",
+      "date": "2024-07-15T19:00:00Z"
+      
+    }
+  ],
+
+  "announcements": [
+    { 
+      "id": 1, 
+      "title": "Reunião de condomínio dia 20/07/25", 
+      "authorId": 2 
+    }
+  ]
+}

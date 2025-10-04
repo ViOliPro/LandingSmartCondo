@@ -1,0 +1,31 @@
+:root{
+
+  --background-linear: linear-gradient(90deg, #00253c 0%, #01717c 100%);
+  --background-linear2: linear-gradient(90deg, #184375 0%, #00B0AB 100%);
+  --background-button: #F6B25A;
+  --secondary-color: #001d34;
+  --tertiary-color: #043E5A;
+  --font-color: #333;
+  --background-color: #f5f5f5;
+  --header-height: 60px;
+  --footer-height: 40px;
+  --text-color: #ffffff;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 20rem 1fr; /* sidebar fixa + conteúdo flexível */
+  min-height: 100vh; /* ocupa a altura toda da tela */
+}
+
+main.content{
+	grid-column: 2; /* conteúdo na segunda coluna */
+	padding-left: 40px;
+	padding-right: 40px;
+}
