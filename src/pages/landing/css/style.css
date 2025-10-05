@@ -3,6 +3,9 @@ body {
   color: #333;
 }
 
+/* =========================================
+   HEADER
+========================================= */
 header {
   color: white;
   background: var(--background-linear);
@@ -37,7 +40,6 @@ header {
   list-style-type: none;
   max-width: 400px;
   width: 100%;
-  margin-right: 60px;
 }
 
 #menuHeader li{
@@ -63,9 +65,13 @@ button:hover {
   opacity: 0.3;
 }
 
+/* =========================================
+   CONTAINER PRINCIPAL
+========================================= */
+
 #container {
   height: 688px;
-  background:  url("../img/backLandingPage.png") right no-repeat,  /* primeira camada = imagem por cima */
+  background:  url("../../../assets/img/backLandingPage.png") right no-repeat,  /* primeira camada = imagem por cima */
   var(--background-linear);
   color: var(--text-color);
   background-position: right;
@@ -107,6 +113,11 @@ button:hover {
   background-position: center;
   background-repeat: no-repeat;
 }
+
+/* =========================================
+   CARDS
+========================================= */
+
 #cardsContainer {
   width: 100%;
   height: 371px;
@@ -120,7 +131,8 @@ button:hover {
 #cards{
   display:flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
+  width: inherit;
 }
 .card {
   background: var(--tertiary-color);
@@ -150,6 +162,10 @@ button:hover {
   margin-bottom: 16px;
 }
 
+/* =========================================
+   INFO SECTION
+========================================= */
+
 .info {
   background-color: var(--secondary-color);
   position: relative;
@@ -164,6 +180,7 @@ button:hover {
   flex-direction: column;
   align-items: center;
   max-width: 1161px;
+  padding: 2rem;
 }
 
 .bgInfo h2{
@@ -179,7 +196,7 @@ button:hover {
   display: flex;
   align-items: center;
   margin-top: 36px;
-  background-image: url("../img/imageInfo.png");
+  background-image: url("../../../assets/img/imageInfo.png");
   height: 325px;
   background-position: 465px;
   background-repeat: no-repeat;
@@ -190,3 +207,242 @@ button:hover {
   max-width: 400px;
 }
 
+/* =========================================
+   RESPONSIVIDADE
+========================================= */
+/* Tablets */
+@media (max-width: 992px) {
+  header {
+    padding: 1rem 2rem;
+  }
+
+  #logo{
+	margin: 0;
+	height: auto;
+	display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  #menuHeader {
+    gap: 1rem;
+    font-size: 18px;
+	justify-content: flex-end;
+	margin: 0;
+  }
+
+  .logoImage{
+	width: auto;
+  }
+
+  .logoText{
+	width: auto;
+	height: auto;
+	transform: translateY(0);
+  }
+
+  .infoContainer {
+    margin: 0 2rem;
+    width: auto;
+  }
+
+  .infoContainer h1 {
+    font-size: 38px;
+  }
+
+  #cardsContainer {
+	width: 100vw;
+  }
+
+  #cards {
+	width: inherit;
+  }
+
+  #cards h3{
+	font-size: 20px;
+	font-weight: 500;
+  }
+
+  .infoTextImg {
+    flex-direction: column;
+    height: 30rem;
+	background-position: center;
+	background-position-y: 2rem;
+	margin-top: 2rem;
+  }
+
+  .infoTextImg h3 {
+    max-width: 90%;
+  }
+}
+
+/* Celulares */
+@media (max-width: 768px) {
+  header {
+    align-items: center;
+  }
+
+  #logo{
+	margin: 1rem;
+	display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .logoText{
+	transform: translateY(0);
+  }
+
+  #menuHeader {
+    flex-direction: row;
+	align-items: center;
+    gap: 1rem;
+	margin: 0;
+  }
+
+  #menuHeader li{
+	display: none;
+  }
+
+  #container {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-position: center;
+	height: 100%;
+  }
+
+  .info{
+	top: 5rem;
+	padding: 3rem 0;
+  }
+
+  .infoContainer {
+    margin: 0;
+    padding: 20px;
+    width: 90%;
+  }
+
+  .infoContainer h1 {
+    font-size: 32px;
+  }
+
+  .infoContainer h4 {
+    font-size: 18px;
+  }
+
+  #menuHeader .btnAccess {
+    display: none;
+  }
+
+  #cardsContainer {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 6rem;
+	height: 540px;
+	position: relative;
+  }
+
+  #cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 2rem;
+	justify-items: center;
+  }
+
+  .card {
+    width: 90%;
+    height: auto;
+    padding: 20px;
+  }
+
+  .bgInfo h2 {
+    font-size: 28px;
+  }
+
+  .infoTextImg {
+	background-position: center;
+	background-position-y: 3rem;
+	height: 30rem;
+	margin-top: 2rem;
+  }
+
+}
+
+/* Celulares pequenos */
+@media (max-width: 480px) {
+  header {
+    padding: 1rem;
+  }
+  #container {
+	height: 450px;
+  }
+  #logo {
+	margin: 0;
+	height: auto;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logoImage {
+	width: 25%;
+  }
+
+  .logoText {
+	width: 50%;
+	transform: translateY(0);
+  }
+
+  #menuHeader {
+	display: none;
+  }
+
+  #cardsContainer {
+	margin-top: 28%;
+	padding: 2rem;
+	height: 1200px;
+	position: relative;
+	background: linear-gradient(180deg, #01717c 0%, #00253c 100%);
+  }
+  #cards{
+	display: flex;
+	flex-direction: column;
+	width: initial;
+  }
+
+  .card{
+	margin: 0;
+	margin-top: 2rem;
+	width: 100%;
+  }
+
+  .info {
+	top: 0;
+	background: linear-gradient(20deg, #01717c 0%, #00253c 100%);
+	padding: 20% 0;
+  }
+
+  .infoContainer h1 {
+    font-size: 26px;
+  }
+
+  .infoContainer h4 {
+    font-size: 16px;
+  }
+
+  .infoTextImg{
+	background-position: center;
+	background-position-y: 5rem;
+	height: 25rem;
+  }
+
+  .btnAccess {
+    font-size: 16px;
+    height: 40px;
+  }
+
+  .bgInfo h2 {
+    font-size: 24px;
+  }
+}

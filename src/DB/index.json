@@ -1,8 +1,8 @@
 {
   "users": [
-    { 
-      "id": 1, 
-      "name": "Marcos de Souza", 
+    {
+      "id": 1,
+      "name": "Marcos de Souza",
       "password": "hashed_password",
       "cpf": "123.456.789-00",
       "dateOfBirth": "1990-01-01",
@@ -17,13 +17,13 @@
         { "type": "moto", "plate": "XYZ-5678" }
       ]
     }
-  
+
   ],
 
   "occurrences": [
-    { 
-      "id": 1, 
-      "title": "Reclamação de barulho", 
+    {
+      "id": 1,
+      "title": "Reclamação de barulho",
       "authorId": 1,
       "status": "pending",
       "description": "O vizinho do apartamento 203 está fazendo muito barulho à noite.",
@@ -32,22 +32,23 @@
   ],
 
   "reservations": [
-    { 
-      "id": 1, 
-      "space": "Salão de festas", 
-      "userId": 1, 
+    {
+      "id": 1,
+      "space": "Salão de festas",
+      "userId": 1,
       "approvedBy": 2,
       "status": "approved",
       "date": "2024-07-15T19:00:00Z"
-      
+
     }
   ],
 
   "announcements": [
-    { 
-      "id": 1, 
-      "title": "Reunião de condomínio dia 20/07/25", 
-      "authorId": 2 
+    {
+      "id": 1,
+      "title": "Reunião de condomínio dia 20/07/25",
+	  "category": "[comunicado, reserva,seguranca,financeiro,assembleia,ocorrencia,eventos,mensagens]",
+      "authorId": 2
     }
   ]
 }
