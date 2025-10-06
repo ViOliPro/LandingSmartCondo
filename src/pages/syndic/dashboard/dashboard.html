@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Dashboard sindico</title>
+  	<link rel="stylesheet" href="./style.css">
+  	<link rel="stylesheet" href="../../../css/global.css">
+  	<link rel="icon" type="image/png" href="../../../assets/img/logo_img.png"/>
+</head>
+<body>
+
+	<div class="container">
+	<!--html Personalizado ATRIBUTO ROLE - quem esta logado [sindico, morador, funcionario]-->
+	<layout-sidebar role="syndic"></layout-sidebar>
+
+	<main class="content">
+
+		<!--html personalizado o TITLE define qual será o titulo da pagina-->
+		<layout-header title="Dashboard"></layout-header>
+
+		<!--Aqui escreva seu código-->
+
+	</main>
+</div>
+
+<script type="module" src="../../../components/layoutSidebar/index.js"></script>
+<script type="module" src="../../../components/layoutHeader/layoutHeader.js"></script>
+<script src="../../../components/logout/index.js"></script>
+</body>
+</html>

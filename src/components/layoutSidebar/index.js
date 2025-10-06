@@ -35,7 +35,7 @@ class LayoutSidebar extends HTMLElement {
 
   render(role) {
     const items = this.menus[role] || this.menus["resident"];
-	const ASSET_PATH = "../../assets/icon/"
+	const ASSET_PATH = "../../../assets/icon/"
 
     const navItems = items.map(
       item => `
@@ -49,17 +49,17 @@ class LayoutSidebar extends HTMLElement {
     ).join("");
 
     const template = `
-      <link rel="stylesheet" href="../../components/layoutSidebar/layoutSidebar.css">
+      <link rel="stylesheet" href="../../../components/layoutSidebar/layoutSidebar.css">
       <aside class="sidebar">
         <div class="logo">
-          <img src="../../assets/img/logo_img.png" alt="Logo SmartCondo">
+          <img src="../../../assets/img/logo_img.png" alt="Logo SmartCondo">
         </div>
         <nav>
           <ul>
             ${navItems}
             <li class="logout-desk">
               <a href="#" onclick="logout()">
-                <img src="../../assets/icon/log-out.svg" alt="">Sair
+                <img src="../../../assets/icon/log-out.svg" alt="">Sair
               </a>
             </li>
           </ul>
